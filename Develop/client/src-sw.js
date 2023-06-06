@@ -35,7 +35,7 @@ registerRoute(({ request }) => request.destination === 'style' || request.destin
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
-        maxAgeSeconds: 24*60*60,
+        maxAgeSeconds: 7*24*60*60,
       }),
     ],
   }));
