@@ -33,4 +33,8 @@ export const getDb = async () => {
 };
 
 
-initdb();
+async function initializeApp() {
+  await initdb();
+};
+
+initializeApp();
