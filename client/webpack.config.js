@@ -23,23 +23,20 @@ module.exports = () => {
         title: "NATE ",
       }),
       new InjectManifest({
-        swSrc: "./src-sw.js",
-        swDest: "service-worker.js",
+        swSrc: "./sw.js",
+        swDest: "sw.js",
       }),
       new WebpackPwaManifest({
         name: "NATE",
         short_name: "NATE",
         description: "just another text editor",
+        fingerprints: false,
+        inject: true,
         background_color: "#c5e1a5",
         theme_color: "#f4e8ad",
         start_url: "./",
         publicPath: "./",
         icons: [
-          {
-            src: path.resolve("/favicon.ico"),
-            sizes: [96, 128, 192, 256, 384, 512],
-            type: "image/x-icon",
-          },
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
