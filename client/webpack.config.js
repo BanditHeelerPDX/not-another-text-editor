@@ -20,8 +20,8 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "NATE ",
-        favicon: path.resolve('./favicon.ico')
+        title: "NATE",
+        favicon: './favicon.ico'
       }),
       new InjectManifest({
         swSrc: "./sw.js",
@@ -29,17 +29,17 @@ module.exports = () => {
       }),
       new WebpackPwaManifest({
         name: "NATE",
-        short_name: "NATE",
+        short_name: "nate",
         description: "just another text editor",
         fingerprints: false,
         inject: true,
-        background_color: "#c5e1a5",
-        theme_color: "#f4e8ad",
+        background_color: "#f4e8ad",
+        theme_color: "#c5e1a5",
         start_url: "./",
         publicPath: "./",
         icons: [
           {
-            src: path.resolve("./src/images/logo.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
             purpose: "any maskable",
             destination: "assets",
